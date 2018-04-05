@@ -6,8 +6,8 @@ html, body {
 }
 
 .hero-image {
-  background-image: url('https://i.imgur.com/mrYWLK9.jpg');
-  height: 80%;
+  background-image: url('https://i.imgur.com/FH5ld5t.jpg');
+  height: 100%;
    /* Position and center the image to scale nicely on all screens */
   background-position: top;
   background-repeat: no-repeat;
@@ -91,8 +91,8 @@ html, body {
   width: 200px;
   border-radius: 50%;
   border: 2px solid black;
-  background-image: url('https://i.imgur.com/mhdu0ws.jpg');
-  background-position: top;
+  background-image: url('https://i.imgur.com/RGlSJVd.jpg');
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
