@@ -9,38 +9,86 @@
   </head>
   <body>
     <div class="hero-image">
-      <div class="hero-text">
-        <h1>Hi, I'm Christian </h1>
-        <p>And I'm a developer</p>
-        <button>Learn More</button>
+      <div class="hero-image-overlay">
+        <div class="hero-text">
+          <h1>Hi, I'm Christian </h1>
+          <p>And I'm a developer</p>
+          <button class='hero-text-button'>Learn More</button>
+        </div>
       </div>
     </div>
 
     <header class="pageheader">
       <h2 class='PageTitle'>Christian Lowe </h2>
 
-      <ul class ="pageMenu">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/christian-lowe-creator/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/TheBrotherFromASouthernMother" class="fa fa-github"></a>
+        <a href="https://www.instagram.com/thebrotherfromasouthernmother/you" class="fa fa-instagram"></a>
+        <a href="https://www.youtube.com/channel/UCFDx-y4kj9AFNmU9mZMNGNA?view_as=subscriber" class="fa fa-youtube"></a>
+      </div>
+
+      <button class="hamburger">&#9776;</button>
+      <button class="cross">&#735;</button>
+      <!-- <div class="hamburger">
+        <div class="hamburger-menu-line"></div>
+        <div class="hamburger-menu-line"></div>
+        <div class="hamburger-menu-line"></div>
+
+      </div> -->
+
+
+      <!-- <ul class ="pageMenu">
         <li> <a href="#About">  Get To Know Me </a></li>
         <li> <a href="#Projects"> What I've Worked On </a> </li>
         <li> <a href="#Contact"> Get In Touch With Me </a></li>
-      </ul>
-      <div class="social-links">
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-github"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-youtube"></a>
-      </div>
+      </ul> -->
+
 
     </header>
 
     <main =class="pageContent">
-      <div class="profile">
-        <div class="profileImage">
+      <section id='About'>
+        <div class="section-overlay">
+
+
+
+          <div class="profile">
+
+          <div class="profileBox">
+            <div class="profileImage"></div>
+          </div>
+
+          <div class="profileTitle">
+            <h3> Software Developer</h3>
+            <h3> Travel Writer </h3>
+            <h3> meme distributor </h3>
+          </div>
+
         </div>
+        <h1 align="center" id="about-title"> About Me</h1>
+
       </div>
 
-
+      </section>
     </main>
 
+
+
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+    let $hamburger = $(".hamburger");
+    let $cross = $(".cross");
+
+    $hamburger.click( ()=> {
+      $hamburger.css("display", "none");
+      $cross.css("display", "flex");
+    })
+    </script>
   </body>
 </html>
