@@ -30,22 +30,14 @@
 
       <button class="hamburger">&#9776;</button>
       <button class="cross">&#735;</button>
-      <!-- <div class="hamburger">
-        <div class="hamburger-menu-line"></div>
-        <div class="hamburger-menu-line"></div>
-        <div class="hamburger-menu-line"></div>
-
-      </div> -->
-
-
-      <!-- <ul class ="pageMenu">
-        <li> <a href="#About">  Get To Know Me </a></li>
-        <li> <a href="#Projects"> What I've Worked On </a> </li>
-        <li> <a href="#Contact"> Get In Touch With Me </a></li>
-      </ul> -->
-
 
     </header>
+
+    <ul class ="pageMenu">
+      <li> <a href="#About">  Get To Know Me </a></li>
+      <li> <a href="#Projects"> What I've Worked On </a> </li>
+      <li> <a href="#Contact"> Get In Touch With Me </a></li>
+    </ul>
 
     <main =class="pageContent">
       <section id='About'>
@@ -68,6 +60,21 @@
         </div>
         <h1 align="center" id="about-title"> About Me</h1>
 
+        <div class="about-me-info">
+          <h1> Who Am I? </h1>
+          <p> I am a Developer, a teacher, a writer, and a phở enthusiast. I am a wearer of many hats and I enjoy meeting new challenges that require me to leverage multiple skills in order to solve them. I also have a lifelong passion for social enterprise and and love learning how to use technology and business to solve the world's most pressing issues.</p>
+        </div>
+
+        <div class="about-me-info">
+          <h2>As a developer I have experience using the following technologies in my projects:</h2>
+          <p>-Languages & Frameworks: JavaScript (ES5 & ES6), JQuery, HTML, CSS, Node.js, Python, Bootstrap , PostgreSQL, React, React Native, and C.
+            <br>
+            <br>
+          -Developer Tools: Git, Github, Heroku, AWS, Atom, Visual Studio Code, Xcode, Npm, Pypi, and Mocha.
+        </p>
+
+        </div>
+
       </div>
 
       </section>
@@ -84,10 +91,21 @@
     <script type="text/javascript">
     let $hamburger = $(".hamburger");
     let $cross = $(".cross");
+    let $pageMenu = $(".pageMenu");
 
     $hamburger.click( ()=> {
-      $hamburger.css("display", "none");
-      $cross.css("display", "flex");
+      $pageMenu.slideToggle( "slow", function() {
+        $pageMenu.css("display", "flex");
+        $hamburger.hide();
+        $cross.show();
+      })
+    })
+
+    $cross.click( () => {
+      $pageMenu.slideToggle( "slow", () => {
+        $cross.hide();
+        $hamburger.show();
+      })
     })
     </script>
   </body>

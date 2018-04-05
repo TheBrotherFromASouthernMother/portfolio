@@ -51,20 +51,21 @@ html, body {
 }
 
 .pageMenu {
-  display: inline-flex;
+  background-color: white;
+  display: none;
+  color: black;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 
 .pageMenu li {
-  display: inline-flex;
   text-decoration: none;
   margin: 0 2% 0 2%;
 }
 
 .pageMenu li a {
-  color: #ffF;
+  color: black;
   text-decoration: none;
 }
 
@@ -100,12 +101,14 @@ html, body {
 .cross {
   color:#fff;
   background: none;
-  font-size:3em;
-  font-weight:bold;
   display: none;
   cursor: pointer;
-  border: none;
-  text-align: center;
+  border:0;
+  font-size:4em;
+  line-height:65px;
+  font-weight:bold;
+  outline:none;
+  padding-top: 35px;
 }
 
 
@@ -169,4 +172,9 @@ html, body {
 #about-title {
   font-size: 3em;
   display: inline-block;
+}
+
+.about-me-info {
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
 }
