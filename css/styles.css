@@ -23,13 +23,32 @@ html, body {
 
 
 .hero-text {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
   color: white;
+}
+
+.hero-text-button {
+  text
+  font-family: inherit;
+  width: 100px;
+  height: 25px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  /* padding: 14px 28px; */
+  font-size: 10px;
+  cursor: pointer;
+  border-color: #e7e7e7;
+  color: black;
+}
+
+.hero-text-button:hover {
+   background: #e7e7e7;
 }
 
 .pageheader {
@@ -41,7 +60,6 @@ html, body {
   align-items: center;
   flex-flow: row wrap;
   overflow: hidden;
-
 }
 
 .PageTitle {
@@ -57,11 +75,20 @@ html, body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  list-style-type: none;
+  text-align: center;
 }
 
 .pageMenu li {
   text-decoration: none;
-  margin: 0 2% 0 2%;
+  margin: 5px 2% 5px 2%;
+  width: 50%;
+  border: 1px solid black;
+}
+
+.pageMenu li:hover {
+  background: #e7e7e7;
+  opacity: 0.5
 }
 
 .pageMenu li a {
@@ -70,11 +97,13 @@ html, body {
 }
 
 .pageMenu li a:hover {
-  opacity: 0.5
+
 }
 
 .social-links {
   display: inline-flex;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .fa {
@@ -96,6 +125,8 @@ html, body {
   background: none;
   font-size:1.4em;
   cursor: pointer;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .cross {
@@ -109,6 +140,7 @@ html, body {
   font-weight:bold;
   outline:none;
   padding-top: 35px;
+  margin-left: 5%;
 }
 
 
@@ -125,13 +157,13 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  min-height: 400px;
 }
 
 .section-overlay {
   width: 100%;
   height: 100%;
-  background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5));
 
 }
 
@@ -177,4 +209,10 @@ html, body {
 .about-me-info {
   background-color: rgba(0,0,0,0.5);
   text-align: center;
+}
+
+.parallax-window {
+    margin-top: 5%;
+    min-height: 600px;
+    background: transparent;
 }
