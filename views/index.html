@@ -242,9 +242,9 @@
 
     <div class="modal-background">
       <div class="modal-content">
-        <img src="./images/mood.png" alt="" class="modal-image">
+        <!-- <img src="./images/mood.png" alt="" class="modal-image">
         <h2 class="project-name"> </h2>
-        <p class="project-description"></p>
+        <p class="project-description"></p> -->
       </div>
 
     </div>
@@ -253,17 +253,17 @@
     <div class="parallax-window" data-parallax="scroll" data-image-src="https://i.imgur.com/YDK9EWD.jpg">
       <div class="Contact">
         <form class="contact-form" action="/" method="post">
-          <input type="email" name="contact-email" value="" id="contact-email">
           <label for="contact-email"> Email </label>
+          <input type="email" name="contact-email" value="" id="contact-email">
 
-          <input type="number" name="contact-number" value="" id="contact-number">
           <label for="contact-number"> Phone Number</label>
+          <input type="number" name="contact-number" value="" id="contact-number">
 
-          <input type="text" name="contact-message" value="" id="contact-message">
           <label for="contact-message"> Message</label>
+          <input type="text" name="contact-message" value="" id="contact-message">
 
-          <input type="submit" name="" value="" id="contact-submit" placeholder="Submit">
-          <label for="contact-submit"></label>
+          <button type="submit" name="" value="" id="contact-submit" placeholder="Submit"> Submit </button>
+          <!-- <label for="contact-submit"></label> -->
         </form>
       </div>
     </div>
@@ -304,7 +304,8 @@
       let $modalBackground = $('.modal-background');
       let $project = $(".project");
       let $projectImage = $(".project-image img");
-      let $modalImage = $(".modal-image");
+      // let $modalImage = $(".modal-image");
+      $modalContent = $(".modal-content");
       let $projectDescription = $(".project-description");
       let $projectName = $(".project-name");
 
@@ -312,18 +313,18 @@
         $project[i].addEventListener("click", e => {
             let name = $project[i].getAttribute("name");
             try {
-              $modalImage.attr("src", $projectImage[i].src);
+              // $modalImage.attr("src", $projectImage[i].src);
               console.log(name)
               $.ajax({
                 url: `/${name}`,
                 method: "GET"
               }).done( response => {
                 console.log(typeof response)
-                $projectDescription.html(response);
+                $modalContent.html(response);
                 $modalBackground.show();
               })
             } catch(err) {
-              console.log("penis");
+              console.log(err);
               window.open(`https://github.com/TheBrotherFromASouthernMother/${name}`);
             }
         })
