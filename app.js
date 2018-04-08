@@ -4,7 +4,11 @@ const app = express();
 
 const fs = require('fs');
 
+const bodyParser = require('body-parser')
+
 app.use(express.static('public'))
+
+app.use(bodyParser.urlencoded({extended: true}))
 
 
 function render(template, res) {
@@ -17,12 +21,20 @@ function render(template, res) {
 
 app.get('/', (req, res) => {
   render("index", res);
-  render()
 })
 
+app.get("/:project", (req, res) => {
+  let projectName = req.params.project;
+  reponseObj = {
+    image: `${__dirname}/images/${projectName}.png`
+  }
+  res.send(reponseObj)
+})
 
 app.post('/', (req, res) => {
-  console.log(req.body)
+  console.log(req.body, "Length: ", Object.keys(req.body))
+  res.end();
+
 })
 
 

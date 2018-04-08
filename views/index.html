@@ -3,9 +3,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta property="og:image" content="./images/portfolio.png">
     <title>Christian Lowe</title>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 
   </head>
@@ -209,21 +210,24 @@
       <section id="projects">
         <div class="my-projects">
           <div class="project">
-            <div class="project-image" style="background-image: url(./images/portfolio.png)" name="portfolio">
+            <div class="project-image" style="background-image: url(https://i.imgur.com/NZbFvug.png)" number="1">
+              <img src="https://i.imgur.com/NZbFvug.png" alt="">
             </div>
             <h3> Portfolio Site </h3>
 
           </div>
 
           <div class="project">
-            <div class="project-image" style="background-image: url(./images/D8App.png)" name="D8">
+            <div class="project-image" style="background-image: url(https://i.imgur.com/keqGV29.png)" number="2">
+              <img src="https://i.imgur.com/keqGV29.png" alt="">
             </div>
             <h3> D8 Web App </h3>
 
           </div>
 
           <div class="project">
-            <div class="project-image" style="background-image: url(./images/mood.png)" name="mood">
+            <div class="project-image" style="background-image: url(https://i.imgur.com/KE6JU8Y.png)" number="3">
+              <img src="https://i.imgur.com/KE6JU8Y.png" alt="">
             </div>
             <h3> Mood.fm </h3>
 
@@ -238,7 +242,9 @@
 
     <div class="modal-background">
       <div class="modal-content">
-        <img src="" alt="">
+        <img src="./images/mood.png" alt="" class="modal-image">
+        <h2 class="project-name"> </h2>
+        <p class="project-description"></p>
       </div>
 
     </div>
@@ -246,7 +252,7 @@
 
     <div class="parallax-window" data-parallax="scroll" data-image-src="https://i.imgur.com/YDK9EWD.jpg">
       <div class="Contact">
-        <form class="contact-form" action="index.html" method="post">
+        <form class="contact-form" action="/" method="post">
           <input type="email" name="contact-email" value="" id="contact-email">
           <label for="contact-email"> Email </label>
 
@@ -297,15 +303,20 @@
     <script type="text/javascript">
       let $modalBackground = $('.modal-background');
       let $project = $(".project");
-      let $projectImage = $(".project-image");
-      console.log($project)
-      console.log($projectImage[0].style.backgroundImage.slice(4, -1));
-
-      $project.on('click', 'div', (e)=> {
-        console.log(e.target.style.backgroundImage.slice(4, -1))
-        console.log(e.target.getAttribute('name'))
-        $modalBackground.show();
-      })
+      let $projectImage = $(".project-image img");
+      let $modalImage = $(".modal-image");
+      
+      for (let i = 0; i < $project.length; i ++) {
+        $project[i].addEventListener("click", e => {
+            try {
+              $modalImage.attr("src", $projectImage[i].src);
+              $modalBackground.show();
+            } catch(err) {
+              console.log(err);
+              window.location.replace("https://github.com/TheBrotherFromASouthernMother");
+            }
+        })
+      }
 
 
       $modalBackground.on('click', () => {
@@ -313,6 +324,13 @@
       })
 
 
+    </script>
+
+    <script type="text/javascript">
+      let $form = $("form");
+      $form.on('submit', e => {
+        // e.preventDefault();
+      })
     </script>
 
   </body>
