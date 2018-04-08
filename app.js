@@ -6,7 +6,9 @@ const fs = require('fs');
 
 const bodyParser = require('body-parser')
 
-app.use(express.static('public'))
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, '/public')))
 
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -25,10 +27,7 @@ app.get('/', (req, res) => {
 
 app.get("/:project", (req, res) => {
   let projectName = req.params.project;
-  reponseObj = {
-    image: `${__dirname}/images/${projectName}.png`
-  }
-  res.send(reponseObj)
+  render(projectName, res)
 })
 
 app.post('/', (req, res) => {

@@ -209,24 +209,24 @@
 
       <section id="projects">
         <div class="my-projects">
-          <div class="project">
-            <div class="project-image" style="background-image: url(https://i.imgur.com/NZbFvug.png)" number="1">
+          <div class="project" name="portfolio">
+            <div class="project-image" style="background-image: url(https://i.imgur.com/NZbFvug.png)">
               <img src="https://i.imgur.com/NZbFvug.png" alt="">
             </div>
             <h3> Portfolio Site </h3>
 
           </div>
 
-          <div class="project">
-            <div class="project-image" style="background-image: url(https://i.imgur.com/keqGV29.png)" number="2">
+          <div class="project" name="D8">
+            <div class="project-image" style="background-image: url(https://i.imgur.com/keqGV29.png)" >
               <img src="https://i.imgur.com/keqGV29.png" alt="">
             </div>
             <h3> D8 Web App </h3>
 
           </div>
 
-          <div class="project">
-            <div class="project-image" style="background-image: url(https://i.imgur.com/KE6JU8Y.png)" number="3">
+          <div class="project" name="mood.fm.js">
+            <div class="project-image" style="background-image: url(https://i.imgur.com/KE6JU8Y.png)" >
               <img src="https://i.imgur.com/KE6JU8Y.png" alt="">
             </div>
             <h3> Mood.fm </h3>
@@ -305,15 +305,26 @@
       let $project = $(".project");
       let $projectImage = $(".project-image img");
       let $modalImage = $(".modal-image");
-      
+      let $projectDescription = $(".project-description");
+      let $projectName = $(".project-name");
+
       for (let i = 0; i < $project.length; i ++) {
         $project[i].addEventListener("click", e => {
+            let name = $project[i].getAttribute("name");
             try {
               $modalImage.attr("src", $projectImage[i].src);
-              $modalBackground.show();
+              console.log(name)
+              $.ajax({
+                url: `/${name}`,
+                method: "GET"
+              }).done( response => {
+                console.log(typeof response)
+                $projectDescription.html(response);
+                $modalBackground.show();
+              })
             } catch(err) {
-              console.log(err);
-              window.location.replace("https://github.com/TheBrotherFromASouthernMother");
+              console.log("penis");
+              window.open(`https://github.com/TheBrotherFromASouthernMother/${name}`);
             }
         })
       }
