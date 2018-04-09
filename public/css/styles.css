@@ -54,7 +54,7 @@ html, body {
 .pageheader {
   background-color: rgba(0, 0, 0, 1);
   height: 10%;
-  max-height: 35%;
+  /* max-height: 35%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -344,7 +344,7 @@ main {
   position: fixed;
   /* top: 10%;
   left: 20%; */
-  transform: translate(50%, 50%);
+  transform: translate(50%, 30%);
   border: 1px solid white;
   overflow: scroll;
   color: white;

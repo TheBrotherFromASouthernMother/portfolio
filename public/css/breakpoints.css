@@ -1,0 +1,27 @@
+@media (max-width: 850px) {
+  * {
+    color: white;
+  }
+  .pageheader {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  .PageTitle {
+    font-size: 2em;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+
+  .fab {
+    font-size: 2em;
+    width: 30px;
+    margin-bottom: 1%;
+  }
+
+  .hamburger, .cross {
+    margin-top: 0;
+    margin-bottom: 2%;
+  }
+}
