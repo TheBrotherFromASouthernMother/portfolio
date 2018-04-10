@@ -312,7 +312,7 @@ main {
 
 .project-image{
   min-width: 100%;
-  min-height: 220px;;
+  height: 220px;;
   background-color: blue;
   background-position: center;
   background-repeat: no-repeat;
@@ -340,14 +340,13 @@ main {
   min-height: 50%;
   max-width: 50%;
   max-height: 60%;
-  /* background-color: white; */
+  height: 60%;
   position: fixed;
-  /* top: 10%;
-  left: 20%; */
   transform: translate(50%, 30%);
   border: 1px solid white;
   overflow: scroll;
   color: white;
+  padding: 2%;
 }
 
 .modal-image {
@@ -367,7 +366,7 @@ main {
 
 .contact-form {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 30%;
   background-color: rgba(0,0,0,0.8);
   min-width: 30%;
@@ -375,5 +374,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding: 2%;
+}
+
+input {
+  width: 50%;
+}
+
+
+#contact-message {
+  max-width: 60%;
+
 }
