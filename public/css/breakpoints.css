@@ -1,7 +1,4 @@
 @media (max-width: 850px) {
-  * {
-    color: white;
-  }
   .pageheader {
     flex-direction: column;
     flex-wrap: nowrap;
