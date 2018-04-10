@@ -27,17 +27,6 @@ function render(template, res) {
     res.send(fileContents)
 }
 
-app.get("/favicon.ico", (req, res) => {
-  let icon = fs.readFile('./images/D8.png', (err) => {
-    if (err) {
-      console.log(err);
-      res.send(err)
-    } else {
-      res.send(icon)
-    }
-  });
-})
-
 
 app.get('/', (req, res) => {
   render("index", res);
