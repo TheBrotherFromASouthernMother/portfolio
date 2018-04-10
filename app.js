@@ -15,6 +15,10 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 app.use(bodyParser.urlencoded({extended: true}))
 
+// app.use(favicon(path.join(__dirname, 'public', 'images' 'favicon.ico')))
+
+app.use('/favicon.ico', express.static('images/favicon.ico'));
+
 
 function render(template, res) {
     //read from  the template files
@@ -22,6 +26,17 @@ function render(template, res) {
     //write out to the response
     res.send(fileContents)
 }
+
+app.get("/favicon.ico", (req, res) => {
+  let icon = fs.readFile('./images/D8.png', (err) => {
+    if (err) {
+      console.log(err);
+      res.send(err)
+    } else {
+      res.send(icon)
+    }
+  });
+})
 
 
 app.get('/', (req, res) => {

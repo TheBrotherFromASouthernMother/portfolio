@@ -286,18 +286,18 @@ main {
 .my-projects {
   height: 100%;
   width: 100%;
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-flow: row wrap;
+  flex-flow: row wrap; */
   background-color: black;
 }
 
 .project {
-  display: inline-block;
-  width: 30%;
+  /* display: inline-block; */
+  width: 20%;
   min-height: 40%;
-  margin: 2.5% 1% 2.5% 1%;
+  margin: 0 0% 0 0%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
   background-color: white;
