@@ -294,7 +294,7 @@ main {
 }
 
 .project {
-  /* display: inline-block; */
+  display: inline-block;
   width: 20%;
   min-height: 40%;
   margin: 0 0% 0 0%;
@@ -388,14 +388,43 @@ input {
 }
 
 .slide-arrows {
-  background: transparent;
+  /* background: transparent; */
+  background-color: black;
   color: white;
   display: inline-block;
-  z-index: 5;
-  opacity: 0.2;
+  z-index: 10;
+  opacity: 0.5;
+  width: 5%;
+  height: 20%;
+  overflow: hidden;
+}
+
+.slide-arrows:hover {
+  opacity: 0.2
+}
+
+.slick-next {
+  z-index: 100;
+  position: absolute;
+  top: 30%;
+  right: 0;
+}
+
+.slick-next:before {
+  z-index: 100;
+}
+
+.slick-prev {
+  z-index: 100;
+  position: absolute;
+  top: 30%;
+  left: 0;
 }
 
 .arrowIcons {
   display: inline-block;
-  font-size: 1em;
+  font-size: 2em;
+  /* position: absolute;
+  top: 40%;
+  left: 40%; */
 }
