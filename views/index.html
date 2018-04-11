@@ -234,10 +234,10 @@
             <h3> Mood.fm </h3>
 
           </div>
-          <div class="">
+          <div class="h">
 
           </div>
-          <!-- <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button> -->
+
         </div>
 
       </section>
@@ -357,9 +357,25 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('.my-projects').slick({
-          slidesToScroll: 4
+          slidesToScroll: 4,
+          arrows: true,
+          prevArrow:"<button type='button' class='slick-prev slide-arrows'><i class='fa fa-angle-left arrowIcons' aria-hidden='true'></i></button>",
+          nextArrow:"<button type='button' class='slick-next slide-arrows'><i class='fa fa-angle-right arrowIcons' aria-hidden='true'></i></button>"
         });
+        // nextArrow.addClass("slide-arrows")
+        // nextArrow.html("<i class=\"fas fa-angle-double-right\"></i>");
+
       });
+        </script>
+
+        <script type="text/javascript">
+          // let $submitButton = $("#contact-submit");
+          // console.log($submitButton)
+          // let nextArrow = $(".next");
+
+
+          console.log(nextArrow,)
+
         </script>
 
   </body>

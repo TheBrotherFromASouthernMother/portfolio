@@ -385,5 +385,17 @@ input {
 
 #contact-message {
   max-width: 60%;
+}
 
+.slide-arrows {
+  background: transparent;
+  color: white;
+  display: inline-block;
+  z-index: 5;
+  opacity: 0.2;
+}
+
+.arrowIcons {
+  display: inline-block;
+  font-size: 1em;
 }
