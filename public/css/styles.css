@@ -351,8 +351,9 @@ main {
 
 .modal-image {
   width: 100%;
-  min-height: 60%;
-  max-height: 70%;
+  /* min-height: 60%;
+  max-height: 70%; */
+  height: 80%;
   overflow: hidden;
 }
 
