@@ -1,4 +1,9 @@
 @media (max-width: 850px) {
+  .hero-image {
+    background-position: center;
+    background-size: contain;
+  }
+
   .pageheader {
     flex-direction: row;
     flex-wrap: nowrap;
