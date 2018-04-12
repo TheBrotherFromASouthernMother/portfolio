@@ -185,6 +185,7 @@ main {
   width: 100%;
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5));
   position: relative;
+  overflow: hidden;
 }
 
 .profile {
@@ -229,11 +230,7 @@ main {
 .about-me-info {
   background-color: rgba(0,0,0,0.5);
   display: block;
-  /* text-align: center; */
-  /* max-width: 50%;
-   position: relative;
-  bottom: 5%;
-  left: 40%; */
+  overflow: hidden;
 }
 
 #tech {
@@ -247,10 +244,10 @@ main {
 .technologies {
   margin-top: 2%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-flow: row wrap;
   align-items:center;
-  padding: 0 2% 0 2%;
+  padding: 0 1% 0 1%;
   color: black;
   min-height: 25%;
   overflow: hidden;
@@ -259,8 +256,9 @@ main {
 .technology-icon {
   display: inline-flex;
   min-width: 60px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 2px;
+  margin-right: 20px;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -296,7 +294,8 @@ main {
 .project {
   display: inline-block;
   width: 20%;
-  min-height: 40%;
+  /* min-height: 40%; */
+  height: 100%;
   margin: 0 0% 0 0%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
@@ -338,11 +337,11 @@ main {
 .modal-content {
   min-width: 50%;
   min-height: 50%;
-  max-width: 50%;
+  max-width: 60%;
   max-height: 60%;
   height: 60%;
   position: fixed;
-  transform: translate(50%, 30%);
+  transform: translate(35%, 30%);
   border: 1px solid white;
   overflow: scroll;
   color: white;
@@ -350,6 +349,7 @@ main {
 }
 
 .modal-image {
+  background-size:contain;
   width: 100%;
   /* min-height: 60%;
   max-height: 70%; */
@@ -363,15 +363,19 @@ main {
     min-height: 600px;
     background: transparent;
     position: inherit;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-form {
-  position: absolute;
+  /* position: absolute;
   top: 20%;
-  left: 30%;
+  left: 33%; */
   background-color: rgba(0,0,0,0.8);
-  min-width: 30%;
-  height: 60%;
+  /* min-width: 30%;
+  height: 60%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -1,24 +1,49 @@
 @media (max-width: 850px) {
   .pageheader {
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     height: auto;
   }
 
   .PageTitle {
-    font-size: 2em;
+    font-size: 1em;
     margin-top: 2%;
     margin-bottom: 1%;
   }
 
+
   .fab {
-    font-size: 2em;
-    width: 30px;
-    margin-bottom: 1%;
+    font-size: 1em;
+    width: 0px;
+    margin: 0;
   }
+
 
   .hamburger, .cross {
     margin-top: 0;
     margin-bottom: 2%;
+  }
+
+
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    position: fixed;
+    transform: translate(10%, 30%);
+
+  }
+
+  .modal-image {
+    background-size: contain;
+    max-height: 50%;
+  }
+
+  .parallax-window {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contact-form {
+    max-width: 80%;
   }
 }
