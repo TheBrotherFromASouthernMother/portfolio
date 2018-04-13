@@ -32,10 +32,17 @@ app.get('/', (req, res) => {
   render("index", res);
 })
 
+
+app.get('/resume', (req, res) => {
+  res.sendFile(`${__dirname}/public/images/tech-resume.pdf`)
+})
+
 app.get("/:project", (req, res) => {
   let projectName = req.params.project;
   render(projectName, res)
 })
+
+
 
 app.post('/', (req, res) => {
   let contactInfo = req.body;

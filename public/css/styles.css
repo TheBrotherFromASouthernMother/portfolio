@@ -40,7 +40,6 @@ html, body {
   border: 2px solid black;
   background-color: white;
   color: black;
-  /* padding: 14px 28px; */
   font-size: 10px;
   cursor: pointer;
   border-color: #e7e7e7;
@@ -51,10 +50,13 @@ html, body {
    background: #e7e7e7;
 }
 
+header {
+  width: 100%;
+}
+
 .pageheader {
   background-color: rgba(0, 0, 0, 1);
   height: 10%;
-  /* max-height: 35%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,24 +88,26 @@ html, body {
   background-color: white;
   display: none;
   color: black;
-  justify-content: space-between;
-  align-items: center;
+  margin-left: 0;
+  padding: 0;
+  /* justify-content: center;
+  align-items: center; */
   flex-direction: column;
   list-style-type: none;
   text-align: center;
 }
 
 .pageMenu li {
+  padding: 0;
   text-decoration: none;
-  margin: 5px 2% 5px 2%;
-  width: 50%;
+  margin: 0 0 5px 0;
+  width: 100%;
   /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* .pageMenu li:hover {
-  background: #e7e7e7;
-  opacity: 0.5
-} */
 
 .pageMenu li a {
   color: black;
@@ -166,6 +170,7 @@ html, body {
 
 main {
   width: 100%;
+  position: relative;
 }
 
 #About {
@@ -194,15 +199,12 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* border: 3px solid black;
-  background-color: rgba(0,0,0, 0.5); */
 }
 
 .profileBox {
   height: 210px;
   width: 210px;
   border-radius: 50%;
-  /* border: 2px solid black; */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -231,10 +233,10 @@ main {
   background-color: rgba(0,0,0,0.5);
   display: block;
   overflow: hidden;
+  padding: 0 3% 0 3%;
 }
 
 #tech {
-  /* background-color: black; */
   min-height: 30%;
   overflow: hidden;
   color: black;
@@ -263,7 +265,6 @@ main {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  /* border: 1px solid black; */
 }
 
 .technology-icon i {
@@ -284,17 +285,12 @@ main {
 .my-projects {
   height: 100%;
   width: 100%;
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: row wrap; */
   background-color: black;
 }
 
 .project {
   display: inline-block;
   width: 20%;
-  /* min-height: 40%; */
   height: 100%;
   margin: 0 0% 0 0%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -351,8 +347,6 @@ main {
 .modal-image {
   background-size:contain;
   width: 100%;
-  /* min-height: 60%;
-  max-height: 70%; */
   height: 80%;
   overflow: hidden;
 }
@@ -370,12 +364,7 @@ main {
 }
 
 .contact-form {
-  /* position: absolute;
-  top: 20%;
-  left: 33%; */
   background-color: rgba(0,0,0,0.8);
-  /* min-width: 30%;
-  height: 60%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -393,43 +382,42 @@ input {
 }
 
 .slide-arrows {
-  /* background: transparent; */
   background-color: black;
   color: white;
   display: inline-block;
-  z-index: 10;
   opacity: 0.5;
-  width: 5%;
+  width: 7%;
   height: 20%;
   overflow: hidden;
 }
 
 .slide-arrows:hover {
-  opacity: 0.2
+  opacity: 1;
 }
 
 .slick-next {
-  z-index: 100;
+  z-index: 99;
   position: absolute;
   top: 30%;
   right: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .slick-next:before {
-  z-index: 100;
+  z-index: 99;
 }
 
 .slick-prev {
-  z-index: 100;
+  z-index: 99;
   position: absolute;
   top: 30%;
   left: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .arrowIcons {
   display: inline-block;
   font-size: 2em;
-  /* position: absolute;
-  top: 40%;
-  left: 40%; */
 }

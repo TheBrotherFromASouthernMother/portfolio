@@ -26,28 +26,33 @@
       <p class="photo-creds"> East Downton, Houston <br> Photo by: <br> <a href="https://tonymmorales.com/about/" target="_blank">Tony Morales </a> </p>
     </div>
 
-    <header class="pageheader">
-      <h2 class='PageTitle'>Christian Lowe </h2>
 
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/christian-lowe-creator/" class="fab fa-linkedin" target="_blank"></a>
-        <a href="https://github.com/TheBrotherFromASouthernMother" class="fab fa-github" target="_blank"></a>
-        <a href="https://www.instagram.com/thebrotherfromasouthernmother" class="fab fa-instagram" target="_blank"></a>
-        <a href="https://www.youtube.com/channel/UCFDx-y4kj9AFNmU9mZMNGNA?view_as=subscriber" class="fab fa-youtube" target="_blank"></a>
-      </div>
-
-      <button class="hamburger">&#9776;</button>
-      <button class="cross">&#735;</button>
-
-    </header>
-
-    <ul class ="pageMenu">
-      <li> <a href="#About">  Get To Know Me </a></li>
-      <li> <a href="#projects"> What I've Worked On </a> </li>
-      <li> <a href="#contact-email"> Get In Touch With Me </a></li>
-    </ul>
 
     <main =class="pageContent">
+      <header>
+
+
+      <div class="pageheader">
+        <!-- <h2 class='PageTitle'>Christian Lowe </h2> -->
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/christian-lowe-creator/" class="fab fa-linkedin" target="_blank"></a>
+          <a href="/resume" class="fab fas fa-file-alt" target="_blank"></a>
+          <a href="https://github.com/TheBrotherFromASouthernMother" class="fab fa-github" target="_blank"></a>
+        </div>
+
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+
+      </div>
+
+      <ul class ="pageMenu">
+        <li> <a href="#About">  Get To Know Me </a></li>
+        <li> <a href="#projects"> What I've Worked On </a> </li>
+        <li> <a href="#contact-email"> Get In Touch With Me </a></li>
+      </ul>
+
+      </header>
+
       <section id='About'>
         <div class="section-overlay">
           <h1 align="center" id="about-title"> About Me</h1>
@@ -66,11 +71,8 @@
           <h1> Who Am I? </h1>
           <p> I am a Developer, a teacher, a writer, and a phở enthusiast. I am a wearer of many hats and I relish the chance to meet exciting new technical challenges. I have a lifelong passion for social enterprise and I love learning how to use technology to solve the world's most pressing issues.</p>
         </div>
-
         </div>
-
       </div>
-
       </section>
 
 
@@ -101,7 +103,7 @@
           </div>
           <div class="technology-icon">
             <i class="devicon-jquery-plain-wordmark"></i>
-            <p> JQuery </p>
+            <p> jQuery </p>
           </div>
           <div class="technology-icon">
             <i class="devicon-nodejs-plain"></i>
@@ -207,7 +209,7 @@
 
       <section id="projects">
         <div class="my-projects" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
-          <!-- <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="" name="Wilfred">Previous</button> -->
+
           <div class="project" name="portfolio">
             <div class="project-image" style="background-image: url(https://i.imgur.com/NZbFvug.png)">
               <img src="https://i.imgur.com/NZbFvug.png" alt="">
@@ -243,7 +245,13 @@
 
       </section>
 
+      <section id="hire-me">
+        <div class="hire-me-background">
+          <div class="hire-me-background-overlay">
 
+          </div>
+        </div>
+      </section>
 
     </main>
 
@@ -277,7 +285,6 @@
       </div>
 
       <p class="photo-creds"> Chinatown, Yokohama<br> Photo by: <br> <a href="https://www.instagram.com/yourgreatbigworld/" target="_blank"> YourGreatBigWorld Travel Photography </a> </p>
-    </div>
     </div>
 
 
@@ -349,12 +356,7 @@
 
     </script>
 
-    <script type="text/javascript">
-      let $form = $("form");
-      $form.on('submit', e => {
-        // e.preventDefault();
-      })
-    </script>
+
     <script type="text/javascript" src="./slick-1.8.0/slick/slick.min.js"></script>
 
 
@@ -366,8 +368,6 @@
           prevArrow:"<button type='button' class='slick-prev slide-arrows'><i class='fa fa-angle-left arrowIcons' aria-hidden='true'></i></button>",
           nextArrow:"<button type='button' class='slick-next slide-arrows'><i class='fa fa-angle-right arrowIcons' aria-hidden='true'></i></button>"
         });
-        // nextArrow.addClass("slide-arrows")
-        // nextArrow.html("<i class=\"fas fa-angle-double-right\"></i>");
 
       });
         </script>
