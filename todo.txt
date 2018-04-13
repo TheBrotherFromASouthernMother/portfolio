@@ -1,0 +1,7 @@
+1. contact info needs a title something along the lines of "Get in touch with me";
+
+2. postgresql integreation would be nice, but at this time is definitely unecessary
+
+3. need to create  margin space between hero image and about me info section that is equal to the height of the banner
+
+4. modal images need resizing

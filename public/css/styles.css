@@ -50,20 +50,6 @@ html, body {
    background: #e7e7e7;
 }
 
-header {
-  width: 100%;
-}
-
-.pageheader {
-  background-color: rgba(0, 0, 0, 1);
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: row wrap;
-  overflow: hidden;
-}
-
 .photo-creds {
   position: absolute;
   bottom: 1%;
@@ -78,6 +64,25 @@ header {
   color: inherit;
 }
 
+
+header {
+  width: 100%;
+  z-index: 100;
+  position:fixed;
+  top: 100%;
+}
+
+.pageBanner {
+  background-color: rgba(0, 0, 0, 1);
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
 .PageTitle {
   display: inline-flex;
   margin-left: 1%;
@@ -85,6 +90,7 @@ header {
 }
 
 .pageMenu {
+  margin-top: 0;
   background-color: white;
   display: none;
   color: black;
@@ -95,6 +101,7 @@ header {
   flex-direction: column;
   list-style-type: none;
   text-align: center;
+  border: 1px solid black;
 }
 
 .pageMenu li {
@@ -158,7 +165,7 @@ header {
   font-weight:bold;
   outline:none;
   padding-top: 35px;
-  margin-left: 5%;
+  margin-RIGHT: 5%;
 }
 
 
