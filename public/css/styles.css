@@ -285,14 +285,17 @@ main {
 #projects {
   min-height: 30%;
   overflow: hidden;
-  color: black;
-  margin-bottom: 5%;
+  color: white;
+  margin-bottom: 0.5%;
+  background-color: black;
 }
 
 .my-projects {
   height: 100%;
   width: 100%;
-  background-color: black;
+  color: black;
+  padding-bottom: 2%;
+
 }
 
 .project {
@@ -360,7 +363,7 @@ main {
 
 
 .parallax-window {
-    margin-top: 2%;
+    margin-top: 0;
     min-height: 600px;
     background: transparent;
     position: inherit;

@@ -22,8 +22,8 @@ let transporter = nodemailer.createTransport({
          from: 'christian.lowe17@yahoo.com', // sender address
          to: 'christglowe@gmail.com', // list of receivers
          subject: msg.subject, // Subject line
-         text: msg.body, // plain text body
-         // html: '<b>Hello world?</b>' // html body
+         text: msg, // plain text body
+         html: `<b> ${msg} <b>` // html body
      };
 
      // send mail with defined transport object
