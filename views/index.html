@@ -8,7 +8,7 @@
     <title>Christian Lowe</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 
     <link rel="stylesheet" type="text/css" href="./slick-1.8.0/slick/slick.css"/>
@@ -307,7 +307,7 @@
     let $main = $("main");
 
     $(window).scroll(function(){
-      $header.css("top", Math.max(0, heightToCover- $(this).scrollTop()));
+      $header.css("top", Math.max(1, heightToCover- $(this).scrollTop()));
     }); // Solution to page banner scrolling issue: http://jsfiddle.net/b43hj/
 
     let startingDistance = $header.css("height");
