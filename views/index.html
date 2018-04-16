@@ -293,102 +293,19 @@
     <script
       src="http://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous">
+      crossorigin="anonymous"></script>
 
-    </script>
-
-
-    <script type="text/javascript">
-    let $header = $("header");
-    let $heroImage = $(".hero-image");
-
-    let heightToCover = Number($heroImage.css("height").replace("px", ""));
-
-    let $main = $("main");
-
-    $(window).scroll(function(){
-      $header.css("top", Math.max(1, heightToCover- $(this).scrollTop()));
-    }); // Solution to page banner scrolling issue: http://jsfiddle.net/b43hj/
-
-    let startingDistance = $header.css("height");
-    $main.css("margin-top", startingDistance)
-
-    let $hamburger = $(".hamburger");
-    let $cross = $(".cross");
-    let $pageMenu = $(".pageMenu");
-
-    console.log($hamburger)
-
-    $hamburger.click( ()=> {
-      $pageMenu.slideToggle( "slow", function() {
-        $pageMenu.css("display", "flex");
-        $hamburger.hide();
-        $cross.show();
-      })
-    })
-
-    $cross.click( () => {
-      $pageMenu.slideToggle( "slow", () => {
-        $cross.hide();
-        $hamburger.show();
-      })
-    })
-    </script>
+    <script type="text/javascript" src="./js/index.js"></script>
 
     <script type="text/javascript" src="./parallax.js-1.5.0/parallax.js"></script>
 
-    <script type="text/javascript">
-      let $modalBackground = $('.modal-background');
-      let $project = $(".project");
-      let $projectImage = $(".project-image img");
-
-      $modalContent = $(".modal-content");
-      let $projectDescription = $(".project-description");
-      let $projectName = $(".project-name");
-
-      for (let i = 0; i < $project.length; i ++) {
-        $project[i].addEventListener("click", e => {
-            let name = $project[i].getAttribute("name");
-            try {
-
-              console.log(name)
-              $.ajax({
-                url: `/${name}`,
-                method: "GET"
-              }).done( response => {
-                console.log(typeof response)
-                $modalContent.html(response);
-                $modalBackground.show();
-              })
-            } catch(err) {
-              console.log(err);
-              window.open(`https://github.com/TheBrotherFromASouthernMother/${name}`);
-            }
-        })
-      }
-
-      $modalBackground.on('click', () => {
-        $modalBackground.hide();
-      })
-
-
-    </script>
+    <script type="text/javascript" src="./js/modal.js"></script>
 
 
     <script type="text/javascript" src="./slick-1.8.0/slick/slick.min.js"></script>
 
 
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.my-projects').slick({
-          slidesToScroll: 4,
-          arrows: true,
-          prevArrow:"<button type='button' class='slick-prev slide-arrows'><i class='fa fa-angle-left arrowIcons' aria-hidden='true'></i></button>",
-          nextArrow:"<button type='button' class='slick-next slide-arrows'><i class='fa fa-angle-right arrowIcons' aria-hidden='true'></i></button>"
-        });
-
-      });
-        </script>
+    <script type="text/javascript" src="./js/slick.js"></script>
 
 
   </body>
