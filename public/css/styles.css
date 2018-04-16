@@ -373,6 +373,10 @@ main {
     align-items: center;
 }
 
+.contact h2 {
+  text-shadow: 3px 3px 3px #000;
+}
+
 .contact-form {
   background-color: rgba(0,0,0,0.8);
   display: flex;
