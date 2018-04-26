@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 // app.use(favicon(path.join(__dirname, 'public', 'images' 'favicon.ico')))
 
-app.use('/favicon.ico', express.static('images/favicon.ico'));
+// app.use('/favicon.ico', express.static('images/favicon.ico'));
 
 
 function render(template, res) {
@@ -29,6 +29,7 @@ function render(template, res) {
 
 
 app.get('/', (req, res) => {
+  console.log(req.url)
   render("index", res);
 })
 
@@ -38,8 +39,14 @@ app.get('/resume', (req, res) => {
 })
 
 app.get("/:project", (req, res) => {
-  let projectName = req.params.project;
-  render(projectName, res)
+  console.log(req.url);
+  if (req.url === "/favicon.ico") {
+    res.sendFile(`${__dirname}/public/images/favicon.ico`)
+  } else {
+    let projectName = req.params.project;
+    render(projectName, res)
+  }
+
 })
 
 
