@@ -53,4 +53,8 @@
   .contact-form {
     max-width: 80%;
   }
+
+  address {
+    font-size: 0.5em;
+  }
 }
