@@ -5,8 +5,11 @@ let heightToCover = Number($heroImage.css("height").replace("px", ""));
 
 let $main = $("main");
 
-$(window).scroll(function(){
-  $header.css("top", Math.max(0, heightToCover- $(this).scrollTop() ) );
+$(document).scroll(function(){
+  console.log($(this).scrollTop())
+  console.log('div height', heightToCover)
+  console.log('window height', $(window).height())
+  $header.css("top", Math.max(2, $(window).height() - $(this).scrollTop()) );
 }); // Solution to page banner scrolling issue: http://jsfiddle.net/b43hj/
 
 let startingDistance = $header.css("height");
