@@ -6,9 +6,25 @@ const fs = require('fs');
 
 const bodyParser = require('body-parser')
 
+
 const path = require('path');
 
 const sendEmail = require('./email.js').sendEmail;
+
+const promise = require('bluebird');
+
+const initOptions = {
+  // Initialization Options
+  promiseLib: promise
+};
+
+const pgp = require('pg-promise')(initOptions);
+
+const db = pgp({
+  connectionString: 'postgres://rhwpebwwswpwxz:3277c450533255f6c24f96af67dab840baf7ba95643a2cec6dcc9bb571479de0@ec2-50-16-196-238.compute-1.amazonaws.com:5432/d7j9r5c9sisj81',
+  ssl: true
+});
+
 
 
 app.use(express.static(path.join(__dirname, '/public')))
@@ -29,7 +45,14 @@ function render(template, res) {
 
 
 app.get('/', (req, res) => {
-  console.log(req.url)
+  var socketIP = req.socket.remoteAddress;
+  var connectionIP = req.connection.remoteAddress;
+  var proxyIP = req.headers['x-forwarded-for'] || null;
+  db.any('INSERT INTO address VALUES (DEFAULT, $1, $2, $3, current_timestamp)', [socketIP, connectionIP, proxyIP]).then( data => {
+    console.log('sucess', data);
+  }).catch( err => {
+    console.log(err);
+  })
   render("index", res);
 })
 
