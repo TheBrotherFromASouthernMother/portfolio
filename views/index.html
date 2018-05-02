@@ -328,6 +328,26 @@
 
     <script type="text/javascript" src="./js/slick.js"></script>
 
+    <script type="text/javascript">
+    let previousPage = document.referrer || null;
+    try {
+       $.ajax({
+         type: 'POST',
+         url: "/reference",
+         data: previousPage
+       })
+     } catch(err) {
+       console.log(err)
+     }
+    let $contactForm = $('.contact-form')
+    .on('submit', function handleEmailSubmit(e) {
+      e.preventDefault();
+      alert('Thanks for contacing me! \n I\'ll be in touch soon!');
+      window.location = 'https://www.linkedin.com/in/christian-lowe-creator/';
+    });
+
+    </script>
+
 
   </body>
 </html>
