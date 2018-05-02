@@ -95,7 +95,7 @@ app.post('/', (req, res) => {
 app.post('/reference', (req, res) => {
   let reference = req.body.previousPage || 'null';
   console.log(reference)
-  db.any("UPDATE address SET reference = $1 WHERE visit = (SELECT MAX(visit) FROM address", [reference]).then( data => {
+  db.any("UPDATE address SET reference = $1 WHERE visit = (SELECT MAX(visit) FROM address)", [reference]).then( data => {
     console.log('Sucess', data);
     res.end();
   }).catch( err => {
