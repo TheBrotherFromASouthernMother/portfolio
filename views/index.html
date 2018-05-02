@@ -329,12 +329,12 @@
     <script type="text/javascript" src="./js/slick.js"></script>
 
     <script type="text/javascript">
-    let previousPage = document.referrer || null;
+    let previousPage = document.referrer || 'no reference';
     try {
        $.ajax({
          type: 'POST',
          url: "/reference",
-         data: previousPage
+         data: { previousPage: previousPage}
        })
      } catch(err) {
        console.log(err)
