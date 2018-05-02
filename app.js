@@ -49,11 +49,11 @@ app.get('/', (req, res) => {
   let connectionIP = req.connection.remoteAddress;
   let proxyIP = req.headers['x-forwarded-for'] || null;
   let reference = req.body
-  // db.any('INSERT INTO address VALUES (DEFAULT, $1, $2, $3, current_timestamp)', [socketIP, connectionIP, proxyIP]).then( data => {
-  //   console.log('sucess', data);
-  // }).catch( err => {
-  //   console.log(err);
-  // })
+  db.any('INSERT INTO address VALUES (DEFAULT, $1, $2, $3, current_timestamp)', [socketIP, connectionIP, proxyIP]).then( data => {
+    console.log('sucess', data);
+  }).catch( err => {
+    console.log(err);
+  })
   render("index", res);
 })
 
@@ -95,7 +95,7 @@ app.post('/', (req, res) => {
 app.post('/reference', (req, res) => {
   let reference = req.body.previousPage || 'null';
   console.log(reference)
-  db.any('UPDATE address SET reference = \'$1 \' WHERE visit = (SELECT MAX(visit) FROM address', [reference]).then( data => {
+  db.any("UPDATE address SET reference = $1 WHERE visit = (SELECT MAX(visit) FROM address", [reference]).then( data => {
     console.log('Sucess', data);
     res.end();
   }).catch( err => {
