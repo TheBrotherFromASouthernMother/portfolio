@@ -45,11 +45,20 @@
 
   .parallax-window {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
   .contact-form {
-    max-width: 80%;
+    width: 80%;
+    align-items: flex-start;
   }
 
   address {
