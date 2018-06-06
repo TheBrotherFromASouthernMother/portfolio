@@ -45,15 +45,15 @@ function render(template, res) {
 
 
 app.get('/', (req, res) => {
-  // let socketIP = req.socket.remoteAddress;
-  // let connectionIP = req.connection.remoteAddress;
-  // let proxyIP = req.headers['x-forwarded-for'] || null;
-  // let reference = req.body
-  // db.any('INSERT INTO address VALUES (DEFAULT, $1, $2, $3, current_timestamp)', [socketIP, connectionIP, proxyIP]).then( data => {
-  //   console.log('sucess', data);
-  // }).catch( err => {
-  //   console.log(err);
-  // })
+  let socketIP = req.socket.remoteAddress;
+  let connectionIP = req.connection.remoteAddress;
+  let proxyIP = req.headers['x-forwarded-for'] || null;
+  let reference = req.body
+  db.any('INSERT INTO address VALUES (DEFAULT, $1, $2, $3, current_timestamp)', [socketIP, connectionIP, proxyIP]).then( data => {
+    console.log('sucess', data);
+  }).catch( err => {
+    console.log(err);
+  })
   render("index", res);
 })
 
@@ -72,7 +72,6 @@ app.get("/:project", (req, res) => {
   }
 
 })
-
 
 
 app.post('/', (req, res) => {

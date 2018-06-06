@@ -141,8 +141,25 @@ header {
   /* border: 1px solid white; */
 }
 
+.social-link {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social-link a{
+  margin-bottom: 0;
+}
+
+.social-link p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
 .fa, .fab {
-  padding: 20px;
+  padding: 10px;
   font-size: 3em;
   width: 50px;
   text-align: center;
@@ -170,12 +187,12 @@ header {
   display: none;
   cursor: pointer;
   border:0;
-  font-size:4em;
-  line-height:65px;
+  font-size:3.5em;
+  line-height:50px;
   font-weight:bold;
   outline:none;
   padding-top: 35px;
-  margin-RIGHT: 5%;
+  margin-right: 5%;
 }
 
 
