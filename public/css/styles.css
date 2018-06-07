@@ -388,6 +388,14 @@ main {
   height: 60%;
 }
 
+.demo-link {
+  color: white;
+}
+
+.demo-link:hover {
+  color: rgba(255,255,255, 0.7);
+}
+
 
 .parallax-window {
     margin-top: 0;
