@@ -17,6 +17,11 @@
     margin-bottom: 1%;
   }
 
+  .social-link p {
+    margin-left: 5px;
+    font-size: 7px;
+  }
+
 
   .fab {
     font-size: 1em;
