@@ -272,6 +272,7 @@ main {
 
 #tech {
   min-height: 30%;
+  width: auto;
   overflow: hidden;
   color: black;
   text-align: center;
@@ -287,6 +288,13 @@ main {
   color: black;
   min-height: 25%;
   overflow: hidden;
+}
+
+#tech-slider {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
 }
 
 .technology-icon {
@@ -396,6 +404,57 @@ main {
   color: rgba(255,255,255, 0.7);
 }
 
+#hire-me {
+  background-color: white;
+  width: 100%;
+  height: 300px;
+  border: 1px solid red;
+  overflow: hidden;
+}
+
+.hire-me-image {
+  background-image: url("../images/me-water.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  display: inline-flex;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hire-me-image h4{
+display: inline-block;
+margin: 0;
+align-self: flex-start;
+padding: 0;
+border: 1px solid blue;
+}
+
+.position-credits {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  max-height: 60%;
+}
+
+.hire-me-image .photo-creds {
+  position: inherit;
+
+}
+
+.hire-me-background {
+  color: black;
+  width: 49%;
+  height: 80%;
+  text-overflow: hidden;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+}
 
 .parallax-window {
     margin-top: 0;

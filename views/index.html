@@ -21,10 +21,9 @@
         <div class="hero-text">
           <h1>Hi, I'm Christian </h1>
           <p>And I'm a developer</p>
-          <p style="font-style: italic; font-size: 0.8em;"> Open for hire in the Greater Denver Area </p>
         </div>
       </div>
-      <p class="photo-creds"> East Downton, Houston <br> Photo by: <br> <a href="https://tonymmorales.com/about/" target="_blank">Tony Morales </a> </p>
+      <p class="photo-creds"> East Downtown, Houston <br> Photo by: <br> <a href="https://tonymmorales.com/about/" target="_blank">Tony Morales </a> </p>
     </div>
 
     <header>
@@ -97,6 +96,9 @@
         <div class="technologies">
 
           <!-- Languages and Frameworks -->
+          <!-- TODO: Add a D3.js animiation to slowly unviel the icons. Sliding white sheet animation
+        -->
+        <div id="tech-slider">
 
           <div class="technology-icon">
             <i class="devicon-html5-plain"></i>
@@ -132,7 +134,7 @@
           </div>
 
           <div class="technology-icon">
-            <i class="devicon-react-original"></i>
+            <i class="devicon-react-original-wordmark"></i>
             <p>React</p>
           </div>
 
@@ -198,8 +200,8 @@
           </div>
 
           <div class="technology-icon">
-            <i class="devicon-intellij-plain"></i>
-            <p> intelliJ</p>
+            <i class="devicon-react-original"></i>
+            <p>React Native</p>
           </div>
 
           <!-- In Progress -->
@@ -218,6 +220,7 @@
           <div class="technology-icon">
             <i class="devicon-mongodb-plain"></i>
             <p> MongoDB </p>
+          </div>
           </div>
         </div>
 
@@ -294,13 +297,22 @@
 
       </section>
 
-      <!-- <section id="hire-me">
-        <div class="hire-me-background">
-          <div class="hire-me-background-overlay">
-            //TODO: Explain my credintials and abilities
+      <section id="hire-me">
+        <div class="hire-me-image">
+          <div class="position-credits">
+            <p class="photo-creds"> Cape Perpetua, Oregon <br> Photo by: <br> <a href="#" target="_blank">Jeannie Sullivan </a></p>
           </div>
         </div>
-      </section> -->
+        <div class="hire-me-background">
+          <h5>Because software development is about more than lines of code in an IDE, or how fast you can implement a merge sort algorithim. <br> </h5>
+          <ul>
+            <li>Maintainability trumps speed because unmaintable code slows down the whole team.</li>
+            <li> Honest communication, because it doesn't matter how great your idea is if you are the only one who can understand it. </li>
+            <li>Transparency with your users and their data matters, not just because trust is good for business, but also because it is a moral requirement. </li>
+            <li>Empathy for your teammates </li>
+          </ul>
+        </div>
+      </section>
 
     </main>
 
@@ -356,6 +368,10 @@
 
 
     <script type="text/javascript" src="./js/slick.js"></script>
+
+
+    <script type="text/javascript" src="./js/tech-icons.js">
+    </script>
 
     <script type="text/javascript">
     let previousPage = document.referrer || 'no reference';
