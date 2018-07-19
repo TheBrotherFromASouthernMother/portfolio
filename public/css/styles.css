@@ -378,8 +378,7 @@ main {
 }
 
 .modal-content {
-  min-width: 50%;
-  max-width: 60%;
+  width: 10%;
   height: 85%;
   border: 1px solid white;
   overflow: scroll;
@@ -388,6 +387,10 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+/* .modal-content.expand {
+  max-width: 60%;
+} */
 
 .modal-image {
   background-size: cover;

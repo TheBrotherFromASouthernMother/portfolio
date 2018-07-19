@@ -15,10 +15,16 @@ for (let i = 0; i < $project.length; i ++) {
         $.ajax({
           url: `/${name}`,
           method: "GET"
-        }).done( response => {
+        }).then( response => {
           console.log(typeof response)
           $modalContent.html(response);
+          $modalContent.css("width", "10%");
           $modalBackground.css("display", "flex");
+        }).done( ()=> {
+
+          $modalContent.animate({
+            width: "60%"
+          }, 1200)
         })
       } catch(err) {
         console.log(err);
