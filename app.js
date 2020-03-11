@@ -11,21 +11,6 @@ const path = require('path');
 
 const sendEmail = require('./email.js').sendEmail;
 
-const promise = require('bluebird');
-
-const initOptions = {
-  // Initialization Options
-  promiseLib: promise
-};
-
-const pgp = require('pg-promise')(initOptions);
-
-const db = pgp({
-  connectionString: 'postgres://rhwpebwwswpwxz:3277c450533255f6c24f96af67dab840baf7ba95643a2cec6dcc9bb571479de0@ec2-50-16-196-238.compute-1.amazonaws.com:5432/d7j9r5c9sisj81',
-  ssl: true
-});
-
-
 
 app.use(express.static(path.join(__dirname, '/public')))
 
@@ -45,15 +30,6 @@ function render(template, res) {
 
 
 app.get('/', (req, res) => {
-  let socketIP = req.socket.remoteAddress;
-  let connectionIP = req.connection.remoteAddress;
-  let proxyIP = req.headers['x-forwarded-for'] || null;
-  let reference = req.body
-  db.any('INSERT INTO address VALUES (DEFAULT, $1, $2, $3, current_timestamp)', [socketIP, connectionIP, proxyIP]).then( data => {
-    console.log('sucess', data);
-  }).catch( err => {
-    console.log(err);
-  })
   render("index", res);
 })
 
@@ -88,19 +64,6 @@ app.post('/', (req, res) => {
     // res.end();
   }
   res.end();
-
-})
-
-app.post('/reference', (req, res) => {
-  let reference = req.body.previousPage || 'null';
-  console.log(reference)
-  db.any("UPDATE address SET reference = $1 WHERE visit = (SELECT MAX(visit) FROM address)", [reference]).then( data => {
-    console.log('Sucess', data);
-    res.end();
-  }).catch( err => {
-    console.log(err.stack);
-    res.end();
-  })
 
 })
 
